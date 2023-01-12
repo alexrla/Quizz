@@ -155,10 +155,39 @@ function nextQuestion() {
     // Verificar se ainda existem perguntas
     if(actualQuestion >= questions.length) {
       // Apresentar a mensagem de fim do jogo
+      showSuccessMessage();
+      return;
     } else {
       createQuestion(actualQuestion);
     }
   }, 1500);
+}
+
+// Exibe o final do jogo
+function showSuccessMessage() {
+  hideOrShowQuizz();
+
+  // Colocando dados na tela de final do jogo
+
+  // Calculando pontos
+  const score = ((points / questions.length) * 100).toFixed(2);
+
+  const displayScore = document.querySelector("#display-score span");
+  displayScore.textContent = score.toString();
+
+  // Alterar o número de perguntas acertadas
+  const correctAnswers = document.querySelector("#correct-answers");
+  correctAnswers.textContent = points;
+
+  // Alterar o número total de perguntas
+  const totalQuestions = document.querySelector("#questions-qty");
+  totalQuestions.textContent = question.length;
+}
+
+// Mostra/Esconde o score
+function hideOrShowQuizz() {
+  quizzContainer.classList.toggle("hide");
+  scoreContainer.classList.toggle("hide");
 }
 
 // Inicialização do Quizz
