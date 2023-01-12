@@ -1,0 +1,106 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+
+  font-family: Helvetica, sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+body {
+  background-color: #242940;
+
+  color: #FFF;
+}
+
+.hide {
+  display: none!important;
+}
+
+#main-title {
+  background-color: #2D425A;
+
+  border-bottom-left-radius: 50px;
+
+  border-bottom-right-radius: 50px;
+
+  padding: 40px 0;
+
+  text-align: center;
+}
+
+/* Score Container */
+#score-container {
+  background-color: #CDDDE8;
+
+  border-radius: 20px;
+
+  color: #000;
+
+  margin: 50px auto;
+
+  padding: 25px;
+
+  text-align: center;
+
+  width: 300px;
+}
+
+#score-container p {
+  font-size: 14px;
+
+  margin: 20px 0;
+}
+
+#score-container #display-score {
+  font-size: 32px;
+
+  font-weight: bold;
+}
+
+#correct-answers {
+  color: #40B576;
+  
+  font-weight: bold;
+}
+
+#questions-qty {
+  color: #0758A4;
+
+  font-weight: bold;
+}
+
+#restart {
+  background-color: #E78230;
+
+  border: 2px solid transparent;
+
+  border-radius: 25px;
+
+  color: #FFF;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  height: 50px;
+
+  margin-top: 20px;
+
+  text-transform: uppercase;
+
+  transition: .5s;
+
+  width: 180px;
+}
+
+#restart:hover {
+  background-color: transparent;
+
+  border-color: #E78230;
+
+  color: #E78230;
+}
